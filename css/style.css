@@ -1,0 +1,201 @@
+body {
+    font-family: 'Roboto',sans-serif;
+    background-color: #f6f7f8
+}
+.btn {
+    border: 1px solid #c2d44e;
+    color: #898e91!important;
+
+}
+.btn:hover {
+    border: 1px solid #c2d44e;
+    background-color: #c2d44e;
+    color: #fff!important;
+}
+hr{
+    margin: 10px 2px
+}
+.nolist{
+    list-style: none;
+}
+.carousel-indicators li {
+    border: 2px solid #000;
+    border-radius: 50%;
+    height: 7px;
+    width: 7px;
+}
+.header {
+    height: 151px;
+    border-bottom: 1px solid #c2d44e
+
+    }
+.header img {
+    height: 70px;
+    
+}
+.header .cover {
+    background-image: url('../img/cover.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 150px;
+
+}
+.header button {
+    margin: 15px 5px;
+}
+
+.header button:hover {
+    color: #c2d44e;
+    border: none
+}
+  .searchTerm {
+    width: 250px;
+    border: 2px solid #c2d44e;
+    border-right: none;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #898e91;
+  }
+  .fas{}
+  .fa-search {
+    width: 40px;
+    height: 40px;
+    margin-left: -5px;
+    background: #c2d44e;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 40px!important;
+  }
+  /* controls ads  */
+  .nav-tabs li a {
+    color: #333;
+    font-size: 20px
+}
+ .nav-tabs .nav-link.active {
+      color: #c2d44e;
+      font-size: 20px
+  }
+
+.Categorie select {
+    border: 2px solid #c2d44e;;
+    color: #898e91;
+    width: 200px;
+
+}
+/* add ads  */
+
+/* Groups ads */
+
+.Groups {
+    border: 1px solid #c2d44e;
+    
+}
+.Groups a {
+    text-decoration: none;
+    color: #898e91;
+}
+.Groups a:hover {
+    color: #c2d44e
+}
+/* information about ads  shap oneoffer*/
+.infoads {
+    background-color: #fff;
+    border-radius: 15px;
+}
+.carousel-item {
+    height: 235px;
+    background-color: #fff;
+
+}
+.infoads {
+    position: relative;
+}
+
+ i {
+    font-size: 25px;
+    color: #c2d44e;
+}
+span a i:hover  {
+    color: #222;
+
+}
+.infoads img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center
+}
+
+.infoads .content {
+    height: 210px;
+    overflow: hidden;
+}
+.infoads .price {
+        font-size: 23px;
+        color: #c2d44e
+}
+ .price span{
+    font-size: 14px;
+    color: #aaa;
+
+}
+.details{
+    color: #898e91
+}
+
+/* information about ads  shap threeoffer*/
+
+.another-ads .carousel-item {
+    height: 200px;
+    background-color: #fff;
+    border-radius: 15px;
+
+}
+.another-ads img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center
+}
+.another-ads .content h2 {
+   font-size: 23px
+}
+.another-ads .content .details {
+    font-size: 16px
+ }
+.another-ads .content {
+    height: 100px;
+    overflow: hidden;
+}
+.another-ads .card {
+    background-color: #fff
+}
+.card .carousel {
+    position: relative;
+
+}
+.card .carousel:hover .icons {
+    left: 10%;
+    visibility: visible;
+    transition: left 1s;
+}
+.icons {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 25px;
+    color: #c2d44e;
+    top: 10%;
+    left: 0%;
+    width: 40px;
+    height: 40px;
+    z-index: 999;
+    text-align: center;
+    border-radius: 50%;
+    visibility: hidden;
+}

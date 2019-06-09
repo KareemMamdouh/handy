@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Handy</title>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="keyword" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+</head>
+
+<body>
+    <!-- The logo -->
+    <header class='header'>
+        <!-- The  logo -->
+        <div class="cover">
+            <div class="container d-flex justify-content-between">
+                <!-- The button login -->
+                <button type='button' class='btn btnuserlogn' data-toggle='modal' data-target='#myModal'>
+                    login
+                </button>
+                <!-- The button Register -->
+                <button type='button' class='btn btnuserlogn' data-toggle='modal' data-target='#myModal1'
+                    name='submitlogin'>
+                    signup
+                </button>
+            </div>
+            <div class="container d-flex justify-content-between">
+                <a href='home.html' class=""><img href='' src='img/Logo.png'></a>
+                <div class="search d-flex align-items-center">
+                    <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                    <a> <i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class='container'>
+            <!-- The modal login -->
+            <div class='modal' id='myModal'>
+                <div class='modal-dialog'>
+                    <div class='modal-content LogIn'>
+                        <div class='modal-header'>
+                            <h4 class='modal-title'>Login</h4>
+                            <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                        </div>
+                        <div class='modal-body'>
+                            <div class='col-12 float-left'>
+                                <form action='login.php' method='POST'>
+                                    <div class='form-group'>
+                                        <label for='usr'>Email:</label>
+                                        <input type='text' class='form-control' placeholder='Your Email'
+                                            name='usernamelogin'>
+                                        <label for='pwd'>Password:</label>
+                                        <input type='password' class='form-control' placeholder='password'
+                                            name='passwordlogin'>
+                                    </div>
+                                    <button type='submit' class='btn '>Log In</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- The Modal Register -->
+            <div class='modal' id='myModal1'>
+                <div class='modal-dialog'>
+                    <div class='modal-content Register'>
+                        <!-- Modal Header -->
+                        <div class='modal-header'>
+                            <h2>Register</h2>
+                            <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class='modal-body'>
+                            <form class='form-horizontal' action='signupsave.php' method='POST'>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5'>Name</label>
+                                    <div class='col-sm-12'>
+                                        <input type='text' class='form-control' placeholder='Name' name='UserName'>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5'>Email:</label>
+                                    <div class='col-sm-12'>
+                                        <input type='email' class='form-control' placeholder='Your Email' name='Email'>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5'>Password:</label>
+                                    <div class='col-sm-12'>
+                                        <input type='password' class='form-control' placeholder='password'
+                                            name='Password'>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5' for='pwd'>Confirm password:</label>
+                                    <div class='col-sm-12'>
+                                        <input type='password' class='form-control' placeholder='Confirm password'
+                                            name='ConfirmPassword'>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5' for='pwd'>Phone Number</label>
+                                    <div class='col-sm-12'>
+                                        <input type='text' class='form-control' placeholder='Phone Number' name='Phone'>
+                                    </div>
+                                </div>
+
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5' for='pwd'>Gender</label>
+                                    <div class="col-sm-12 ">
+                                        <select class='form-control' name='type'>
+                                            <option value='1'>Male</option>
+                                            <option value='2'>Femael</option>
+                                        </select>
+                                    </div>
+                                    <span><a href="">if you want to Register as a seller </a></span>
+                                </div>
+                                <div class='form-group'>
+                                    <div class='col-sm-offset-3 col-sm-12'>
+                                        <button type='submit' name='submitRegister'
+                                            class='btn btn-default'>Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="Register">
+        <div class="container mt-3">
+            <form class='form-horizontal' action='signupsave.php' method='POST'>
+                <div class='form-group'>
+                    <label class='control-label col-sm-5'>Name</label>
+                    <div class='col-sm-12'>
+                        <input type='text' class='form-control' placeholder='Name' name='UserName'>
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <label class='control-label col-sm-5'>Email:</label>
+                    <div class='col-sm-12'>
+                        <input type='email' class='form-control' placeholder='Your Email' name='Email'>
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <label class='control-label col-sm-5'>Password:</label>
+                    <div class='col-sm-12'>
+                        <input type='password' class='form-control' placeholder='password' name='Password'>
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <label class='control-label col-sm-5' for='pwd'>Confirm password:</label>
+                    <div class='col-sm-12'>
+                        <input type='password' class='form-control' placeholder='Confirm password'
+                            name='ConfirmPassword'>
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <label class='control-label col-sm-5' for='pwd'>Phone Number</label>
+                    <div class='col-sm-12'>
+                        <input type='text' class='form-control' placeholder='Phone Number' name='Phone'>
+                    </div>
+                </div>
+
+                <div class='form-group'>
+                    <label class='control-label col-sm-5' for='pwd'>Gender</label>
+                    <div class="col-sm-12 ">
+                        <select class='form-control' name='type'>
+                            <option value='1'>Male</option>
+                            <option value='2'>Femael</option>
+                        </select>
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <label class='control-label col-sm-5' for='pwd'>Type os sale</label>
+                    <div class="col-sm-12 ">
+                        <select class='form-control' name='type'>
+                            <option value='1'>shop</option>
+                            <option value='2'>online</option>
+                        </select>
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <label class='control-label col-sm-5' for='pwd'>address</label>
+                    <div class="col-sm-12 ">
+                        <input type='text' class='form-control'
+                            placeholder='shop : address  | online: free delivery address ' name='address'>
+
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <label class='control-label col-sm-5' for='pwd'>City</label>
+                    <div class="col-sm-12 ">
+                        <select class='form-control' name='type'>
+                            <option value='1'>cairo</option>
+                            <option value='2'>alex</option>
+                        </select>
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <label class='control-label col-sm-5' for='pwd'> ID image</label>
+                    <div class="col-sm-12 ">
+                        <input type='file' class='form-control' name='IDimage'>
+                    </div>
+                </div>
+
+
+
+
+                <div class='form-group'>
+                    <div class='col-sm-offset-3 col-sm-12'>
+                        <button type='submit' name='submitRegister' class='btn btn-default'>Submit</button>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

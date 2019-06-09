@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Handy</title>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="keyword" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/adspagestyle.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+</head>
+
+<body>
+    <!-- The logo -->
+    <header class='header'>
+        <!-- The  logo -->
+        <div class="cover">
+            <div class="container d-flex justify-content-between">
+                <!-- The button login -->
+                <button type='button' class='btn btnuserlogn' data-toggle='modal' data-target='#myModal'>
+                    login
+                </button>
+                <!-- The button Register -->
+                <button type='button' class='btn btnuserlogn' data-toggle='modal' data-target='#myModal1'
+                    name='submitlogin'>
+                    Register
+
+                </button>
+            </div>
+            <div class="container d-flex justify-content-between">
+                <a href='home.html' class=""><img href='' src='img/Logo.png'></a>
+                <div class="search d-flex align-items-center">
+                    <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                    <a> <i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class='container'>
+            <!-- The modal login -->
+            <div class='modal' id='myModal'>
+                <div class='modal-dialog'>
+                    <div class='modal-content LogIn'>
+                        <div class='modal-header'>
+                            <h4 class='modal-title'>Login</h4>
+                            <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                        </div>
+                        <div class='modal-body'>
+                            <div class='col-12 float-left'>
+                                <form action='login.php' method='POST'>
+                                    <div class='form-group'>
+                                        <label for='usr'>Email:</label>
+                                        <input type='text' class='form-control' placeholder='Your Email'
+                                            name='usernamelogin'>
+                                        </div>
+                                        <div class='form-group'>
+                                        <label for='pwd'>Password:</label>
+                                        <input type='password' class='form-control' placeholder='password'
+                                            name='passwordlogin'>
+                                    </div>
+                                    <button type='submit' class='btn '>Log In</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- The Modal Register -->
+            <div class='modal' id='myModal1'>
+                <div class='modal-dialog'>
+                    <div class='modal-content Register'>
+                        <!-- Modal Header -->
+                        <div class='modal-header'>
+                            <h2>Register</h2>
+                            <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class='modal-body'>
+                            <form class='form-horizontal' action='signupsave.php' method='POST'>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5'>Name</label>
+                                    <div class='col-sm-12'>
+                                        <input type='text' class='form-control' placeholder='Name' name='UserName'>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5'>Email:</label>
+                                    <div class='col-sm-12'>
+                                        <input type='email' class='form-control' placeholder='Your Email' name='Email'>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5'>Password:</label>
+                                    <div class='col-sm-12'>
+                                        <input type='password' class='form-control' placeholder='password'
+                                            name='Password'>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5' for='pwd'>Confirm password:</label>
+                                    <div class='col-sm-12'>
+                                        <input type='password' class='form-control' placeholder='Confirm password'
+                                            name='ConfirmPassword'>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5' for='pwd'>Phone Number</label>
+                                    <div class='col-sm-12'>
+                                        <input type='text' class='form-control' placeholder='Phone Number' name='Phone'>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <label class='control-label col-sm-5' for='pwd'>Gender</label>
+                                    <div class="col-sm-12 ">
+                                        <select class='form-control' name='type'>
+                                            <option value='1'>Male</option>
+                                            <option value='2'>Femael</option>
+                                        </select>
+                                        <span><a href="">if you want to Register as a seller </a></span>
+
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <div class='col-sm-offset-3 col-sm-12'>
+                                        <button type='submit' name='submitRegister'
+                                            class='btn btn-default'>Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- the ads -->
+    <section class="ads">
+        <div class="container px-4">
+            <div class="row p-1">
+                <!-- column ads -->
+                <div class="col-sm-9 pl-0">
+                    <!-- information about ads -->
+
+                    <div class="row infoads shadow col-sm-12 p-0 my-3 mx-1">
+                        <div class="col-sm-6 p-3 ">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo" data-slide-to="1"></li>
+                                    <li data-target="#demo" data-slide-to="2"></li>
+                                </ul>
+
+                                <!-- The slideshow -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/cover1.jpg" alt="Los Angeles">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/cover2.jpg" alt="Chicago">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/cover3.jpg" alt="New York">
+                                    </div>
+                                </div>
+                            </div><!-- slide ads -->
+                        </div><!-- slide ads -->
+                        <div class="info col-sm-6">
+                            <div class="content">
+                                <p class="price pt-3">$3434 <span> lowers pricce</span></p>
+                                <h2>title title title title title title title title s</h2>
+                                <p class="details">details details details details details details details details
+                                    details
+                                    details details details details details details details details details details
+                                    details
+                                    details details details details details details details details details details
+                                    details
+                                    details details details details details </p>
+                            </div>
+                        </div>
+
+                    </div><!-- ads -->
+                    <!-- start write info for  offer -->
+                    <div class="offer">
+                        <!-- First offer -->
+                        <div class="card shadow my-3" id="accordion">
+                            <div class="card-header" data-toggle="collapse" href="#collapseOne">
+                                <!--warning .. change Id and href-->
+                                <p class="m-0">name seller <span class="float-right price1">$323</span></p>
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                <!--warning .. change Id and href-->
+                                <div class="card-body p-1">
+                                    <div class="row infoads col-sm-12 p-0 my-0 mx-0">
+                                        <div class="col-sm-5 p-3 ">
+                                            <div id="demoof1" class="carousel slide" data-ride="carousel">
+
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#demoof1" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#demoof1" data-slide-to="1"></li>
+                                                    <li data-target="#demoof1" data-slide-to="2"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="img/cover1.jpg" alt="Los Angeles">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="img/cover2.jpg" alt="Chicago">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="img/cover3.jpg" alt="New York">
+                                                    </div>
+                                                </div>
+                                            </div><!-- slide ads -->
+                                        </div><!-- slide ads -->
+                                        <div class="info col-sm-7">
+                                            <div class="content pt-4">
+                                                <p>type : </p>
+                                                <p>address : </p>
+                                                <p>phone : </p>
+                                                <p>email : </p>
+                                                <p>more details : </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card card-header  py-2 px-3 m-1">
+                                        <!-- button to show comments -->
+                                        <a class="pl-3 pb-1" data-toggle="collapse" href="#collapseExample"
+                                            role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            <!--warning .. change Id and href-->
+                                            comments (2)
+                                        </a>
+                                        <!-- comments list -->
+                                        <div class="collapse comments" id="collapseExample">
+                                            <!--warning .. change Id and href-->
+                                            <div class=" collapse card card-body py-1 px-3" id="collapseExample">
+                                                <!--warning .. change Id and href-->
+                                                <!-- comment -->
+                                                <div class='card  my-2 '>
+                                                    <div class='card-header px-1 py-1 m-0 row'>
+                                                        <div class="col-sm-1 text-center"><img src='img/user.jpg'>
+                                                        </div>
+                                                        <div class="col-sm-11 ">
+                                                            <a href="">name</a><span
+                                                                class='float-right pt-2 date'>date</span>
+                                                            <p class="m-0">this is comment<br>dfd</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- start footer comment list (button like and Replay to comment ) -->
+                                                    <div class='card-footer pt-2 pb-2 '>
+                                                        <a href="" class=" px-2 pb-1">
+                                                            <i class="far fa-thumbs-up"></i>
+
+                                                            Like </a>
+                                                        <a href="" class=" px-2 pb-1"><i class="far fa-thumbs-down"></i>
+
+                                                            DisLike </a>
+                                                        <a class=" px-2 pb-1" data-toggle="collapse"
+                                                            href="#collapseExample-R1" role="button"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseExample-R1">Replay (4)</a>
+                                                        <!--warning .. change Id and href-->
+                                                        <!-- start Replay list -->
+                                                        <div class="collapse " id="collapseExample-R1">
+                                                            <!--warning .. change Id and href-->
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1"><i
+                                                                            class="far fa-thumbs-up"></i>Like </a>
+                                                                    <a href="" class=" px-2 pb-1"><i
+                                                                            class="far fa-thumbs-down"></i>DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end Replay -->
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1"><i
+                                                                            class="far fa-thumbs-up"></i>Like </a>
+                                                                    <a href="" class=" px-2 pb-1"><i
+                                                                            class="far fa-thumbs-down"></i>DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- form send Replay -->
+                                                            <form action="" method=''>
+                                                                <div class="form-group">
+                                                                    <label>Write your Replay</label>
+                                                                    <input type="hidden" name="AdsID" value="">
+                                                                    <textarea class="form-control" name="textarea"
+                                                                        rows="3"></textarea>
+                                                                    <input type='submit' class='btn  float-right'
+                                                                        value='send' data-toggle='modal'
+                                                                        data-target='#myModal' value='send'
+                                                                        name='submitlogin'>
+                                                                </div>
+                                                            </form>
+                                                            <!-- end Replay -->
+                                                        </div><!-- Replay list -->
+                                                    </div> <!-- end footer comment list -->
+                                                </div>
+                                                <!-- end comment -->
+
+                                                <div class='card my-2 '>
+                                                    <div class='card-header px-1 py-1 m-0 row'>
+                                                        <div class="col-sm-1 text-center"><img src='img/user.jpg'>
+                                                        </div>
+                                                        <div class="col-sm-11 ">
+                                                            <a href="">name</a><span
+                                                                class='float-right pt-2 date'>date</span>
+                                                            <p class="m-0">this is comment<br>dfd</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- start footer comment list (button like and Replay to comment ) -->
+                                                    <div class='card-footer pt-2 pb-2 '>
+                                                        <a href="" class=" px-2 pb-1"><i
+                                                                class="far fa-thumbs-up"></i>Like </a>
+                                                        <a href="" class=" px-2 pb-1"><i
+                                                                class="far fa-thumbs-down"></i>DisLike </a>
+                                                        <a class=" px-2 pb-1" data-toggle="collapse"
+                                                            href="#collapseExample-R2" role="button"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseExample-R2">Replay (4)</a>
+                                                        <!-- start Replay list -->
+                                                        <div class="collapse " id="collapseExample-R2">
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1">Like </a>
+                                                                    <a href="" class=" px-2 pb-1">DisLike </a>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <!-- end Replay -->
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1"><i
+                                                                            class="far fa-thumbs-up"></i>Like </a>
+                                                                    <a href="" class=" px-2 pb-1"><i
+                                                                            class="far fa-thumbs-down"></i>DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- form send Replay -->
+                                                            <form action="" method=''>
+                                                                <div class="form-group">
+                                                                    <label>Write your Replay</label>
+                                                                    <input type="hidden" name="AdsID" value="">
+                                                                    <textarea class="form-control" name="textarea"
+                                                                        rows="3"></textarea>
+                                                                    <input type='submit' class='btn float-right'
+                                                                        value='send' data-toggle='modal'
+                                                                        data-target='#myModal' value='send'
+                                                                        name='submitlogin'>
+                                                                </div>
+                                                            </form>
+                                                            <!-- end Replay -->
+                                                        </div><!-- Replay list -->
+
+                                                    </div> <!-- end footer comment list -->
+                                                </div>
+                                                <!-- end comment -->
+
+
+                                                <!-- form send comment -->
+                                                <form action="sendcomment.php" method='POST'>
+                                                    <div class="form-group">
+                                                        <label>Write your comment</label>
+                                                        <input type="hidden" name="AdsID" value="">
+                                                        <textarea class="form-control" name="textarea"
+                                                            rows="3"></textarea>
+                                                        <input type='submit' value='send' class='btn  float-right mb-1'
+                                                            data-toggle='modal' data-target='#myModal' value='send'
+                                                            name='submitlogin'>
+                                                    </div>
+                                                </form>
+                                            </div> <!-- comments list -->
+
+
+                                        </div><!-- comments list collapse -->
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- another offer -->
+                        <div class="card shadow my-3">
+                            <div class="card-header" data-toggle="collapse" href="#collapseTwo">
+                                <!--warning .. change Id and href-->
+                                <p class="m-0">name seller <span class="float-right price1">$323</span></p>
+                            </div>
+                            <div id="collapseTwo" class="collapse " data-parent="#accordion">
+                                <!--warning .. change Id and href-->
+                                <div class="card-body p-1">
+                                    <div class="row infoads col-sm-12 p-0 my-0 mx-0">
+                                        <div class="col-sm-5 p-3 ">
+                                            <div id="demoof2" class="carousel slide" data-ride="carousel">
+
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#demoof2" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#demoof2" data-slide-to="1"></li>
+                                                    <li data-target="#demoof2" data-slide-to="2"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="img/cover1.jpg" alt="Los Angeles">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="img/cover2.jpg" alt="Chicago">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="img/cover3.jpg" alt="New York">
+                                                    </div>
+                                                </div>
+                                            </div><!-- slide ads -->
+                                        </div><!-- slide ads -->
+                                        <div class="info col-sm-7">
+                                            <div class="content pt-4">
+                                                <p class="details">type : </p>
+                                                <p class="details">address : </p>
+                                                <p class="details">phone : </p>
+                                                <p class="details">email : </p>
+                                                <p class="details">more details : </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card card-header  py-2 px-3 m-1">
+                                        <!-- button to show comments -->
+                                        <a class="pl-3 pb-1" data-toggle="collapse" href="#collapseExample2"
+                                            role="button" aria-expanded="false" aria-controls="collapseExample2">
+                                            <!--warning .. change Id and href-->
+                                            comments (2)
+                                        </a>
+                                        <!-- comments list -->
+                                        <div class="collapse comments" id="collapseExample2">
+                                            <!--warning .. change Id and href-->
+                                            <div class=" collapse card card-body py-1 px-3" id="collapseExample2">
+                                                <!--warning .. change Id and href-->
+                                                <!-- comment -->
+                                                <div class='card my-2 '>
+                                                    <div class='card-header px-1 py-1 m-0 row'>
+                                                        <div class="col-sm-1 text-center"><img src='img/user.jpg'>
+                                                        </div>
+                                                        <div class="col-sm-11 ">
+                                                            <a href="">name</a><span
+                                                                class='float-right pt-2 date'>date</span>
+                                                            <p class="m-0">this is comment<br>dfd</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- start footer comment list (button like and Replay to comment ) -->
+                                                    <div class='card-footer pt-2 pb-2 '>
+                                                        <a href="" class=" px-2 pb-1">Like </a>
+                                                        <a href="" class=" px-2 pb-1">DisLike </a>
+                                                        <a class=" px-2 pb-1" data-toggle="collapse"
+                                                            href="#collapseExample-R4" role="button"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseExample-R4">Replay (4)</a>
+                                                        <!--warning .. change Id and href-->
+                                                        <!-- start Replay list -->
+                                                        <div class="collapse " id="collapseExample-R4">
+                                                            <!--warning .. change Id and href-->
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1">Like </a>
+                                                                    <a href="" class=" px-2 pb-1">DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end Replay -->
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1">Like </a>
+                                                                    <a href="" class=" px-2 pb-1">DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end Replay -->
+                                                        </div><!-- Replay list -->
+                                                    </div> <!-- end footer comment list -->
+                                                </div>
+                                                <!-- end comment -->
+
+                                                <div class='card my-2 '>
+                                                    <div class='card-header px-1 py-1 m-0 row'>
+                                                        <div class="col-sm-1 text-center"><img src='img/user.jpg'>
+                                                        </div>
+                                                        <div class="col-sm-11 ">
+                                                            <a href="">name</a><span
+                                                                class='float-right pt-2 date'>date</span>
+                                                            <p class="m-0">this is comment<br>dfd</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- start footer comment list (button like and Replay to comment ) -->
+                                                    <div class='card-footer pt-2 pb-2 '>
+                                                        <a href="" class=" px-2 pb-1">Like </a>
+                                                        <a href="" class=" px-2 pb-1">DisLike </a>
+                                                        <a class=" px-2 pb-1" data-toggle="collapse"
+                                                            href="#collapseExample-R2" role="button"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseExample-R2">Replay (4)</a>
+                                                        <!-- start Replay list -->
+                                                        <div class="collapse " id="collapseExample-R2">
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1">Like </a>
+                                                                    <a href="" class=" px-2 pb-1">DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end Replay -->
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1">Like </a>
+                                                                    <a href="" class=" px-2 pb-1">DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end Replay -->
+                                                        </div><!-- Replay list -->
+                                                    </div> <!-- end footer comment list -->
+                                                </div>
+                                                <!-- end comment -->
+
+
+                                                <!-- form send comment -->
+                                                <form action="sendcomment.php" method='POST'>
+                                                    <div class="form-group">
+                                                        <label>Write your comment</label>
+                                                        <input type="hidden" name="AdsID" value="">
+                                                        <textarea class="form-control" name="textarea"
+                                                            rows="3"></textarea>
+                                                        <input type='submit' class='btn btn-primary float-right '
+                                                            value='send' class='btn btn-primary float-right mb-5'
+                                                            data-toggle='modal' data-target='#myModal' value='send'
+                                                            name='submitlogin'>
+                                                    </div>
+                                                </form>
+                                            </div> <!-- comments list -->
+
+
+                                        </div><!-- comments list collapse -->
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- another offer -->
+                        <div class="card shadow my-3">
+                            <div class="card-header" data-toggle="collapse" href="#collapseThere">
+                                <!--warning .. change Id and href-->
+                                <p class="m-0">name seller <span class="float-right price1">$323</span></p>
+                            </div>
+                            <div id="collapseThere" class="collapse " data-parent="#accordion">
+                                <!--warning .. change Id and href-->
+                                <div class="card-body p-1">
+                                    <div class="row infoads col-sm-12 p-0 my-0 mx-0">
+                                        <div class="col-sm-5 p-3 ">
+                                            <div id="demoof3" class="carousel slide" data-ride="carousel">
+
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#demoof3" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#demoof3" data-slide-to="1"></li>
+                                                    <li data-target="#demoof3" data-slide-to="2"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="img/cover1.jpg" alt="Los Angeles">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="img/cover2.jpg" alt="Chicago">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="img/cover3.jpg" alt="New York">
+                                                    </div>
+                                                </div>
+                                            </div><!-- slide ads -->
+                                        </div><!-- slide ads -->
+                                        <div class="info col-sm-7">
+                                            <div class="content pt-4">
+                                                <p class="details">type : </p>
+                                                <p class="details">address : </p>
+                                                <p class="details">phone : </p>
+                                                <p class="details">email : </p>
+                                                <p class="details">more details : </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card card-header  py-2 px-3 m-1">
+                                        <!-- button to show comments -->
+                                        <a class="pl-3 pb-1" data-toggle="collapse" href="#collapseExample3"
+                                            role="button" aria-expanded="false" aria-controls="collapseExample3">
+                                            <!--warning .. change Id and href-->
+                                            comments (2)
+                                        </a>
+                                        <!-- comments list -->
+                                        <div class="collapse comments" id="collapseExample3">
+                                            <!--warning .. change Id and href-->
+                                            <div class=" collapse card card-body py-1 px-3" id="collapseExample3">
+                                                <!--warning .. change Id and href-->
+                                                <!-- comment -->
+                                                <div class='card my-2 '>
+                                                    <div class='card-header px-1 py-1 m-0 row'>
+                                                        <div class="col-sm-1 text-center"><img src='img/user.jpg'>
+                                                        </div>
+                                                        <div class="col-sm-11 ">
+                                                            <a href="">name</a><span
+                                                                class='float-right pt-2 date'>date</span>
+                                                            <p class="m-0">this is comment<br>dfd</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- start footer comment list (button like and Replay to comment ) -->
+                                                    <div class='card-footer pt-2 pb-2 '>
+                                                        <a href="" class=" px-2 pb-1">Like </a>
+                                                        <a href="" class=" px-2 pb-1">DisLike </a>
+                                                        <a class=" px-2 pb-1" data-toggle="collapse"
+                                                            href="#collapseExample-R1" role="button"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseExample-R1">Replay (4)</a>
+                                                        <!--warning .. change Id and href-->
+                                                        <!-- start Replay list -->
+                                                        <div class="collapse " id="collapseExample-R1">
+                                                            <!--warning .. change Id and href-->
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1">Like </a>
+                                                                    <a href="" class=" px-2 pb-1">DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end Replay -->
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1">Like </a>
+                                                                    <a href="" class=" px-2 pb-1">DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end Replay -->
+                                                        </div><!-- Replay list -->
+                                                    </div> <!-- end footer comment list -->
+                                                </div>
+                                                <!-- end comment -->
+
+                                                <div class='card my-2 '>
+                                                    <div class='card-header px-1 py-1 m-0 row'>
+                                                        <div class="col-sm-1 text-center"><img src='img/user.jpg'>
+                                                        </div>
+                                                        <div class="col-sm-11 ">
+                                                            <a href="">name</a><span
+                                                                class='float-right pt-2 date'>date</span>
+                                                            <p class="m-0">this is comment<br>dfd</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- start footer comment list (button like and Replay to comment ) -->
+                                                    <div class='card-footer pt-2 pb-2 '>
+                                                        <a href="" class=" px-2 pb-1">Like </a>
+                                                        <a href="" class=" px-2 pb-1">DisLike </a>
+                                                        <a class=" px-2 pb-1" data-toggle="collapse"
+                                                            href="#collapseExample-R2" role="button"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseExample-R2">Replay (4)</a>
+                                                        <!-- start Replay list -->
+                                                        <div class="collapse " id="collapseExample-R2">
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1">Like </a>
+                                                                    <a href="" class=" px-2 pb-1">DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end Replay -->
+                                                            <!-- start Replay -->
+                                                            <div class="row replay m-3 py-2 ">
+                                                                <div class="col-sm-1 text-center"><img
+                                                                        src='img/user.jpg'></div>
+                                                                <div class="col-sm-11 ">
+                                                                    <a href="">name</a><span
+                                                                        class='float-right pt-2 date'>date</span>
+                                                                    <p class="m-0">this is comment<br>dfd</p>
+
+                                                                </div>
+                                                                <!-- button like and DisLike to Replay -->
+                                                                <div class='card-body px-1 pt-2 pb-0 border-top'>
+                                                                    <a href="" class=" px-2 pb-1">Like </a>
+                                                                    <a href="" class=" px-2 pb-1">DisLike </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end Replay -->
+                                                        </div><!-- Replay list -->
+                                                    </div> <!-- end footer comment list -->
+                                                </div>
+                                                <!-- end comment -->
+
+
+                                                <!-- form send comment -->
+                                                <form action="sendcomment.php" method='POST'>
+                                                    <div class="form-group">
+                                                        <label>Write your comment</label>
+                                                        <input type="hidden" name="AdsID" value="">
+                                                        <textarea class="form-control" name="textarea"
+                                                            rows="3"></textarea>
+                                                        <input type='submit' class='btn btn-primary float-right '
+                                                            value='send' class='btn btn-primary float-right mb-5'
+                                                            data-toggle='modal' data-target='#myModal' value='send'
+                                                            name='submitlogin'>
+                                                    </div>
+                                                </form>
+                                            </div> <!-- comments list -->
+                                        </div><!-- comments list collapse -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end offers -->
+                </div><!-- end column for info and offer ads -->
+                <!-- column for some another ads -->
+
+
+                <div class="another-ads col-sm-3 p-0 mt-3 ">
+                    <div class="card m-3 shadow border ">
+                        <div id="demoof63" class="carousel slide border" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demoof63" data-slide-to="0" class="active"></li>
+                                <!--warning .. change Id and href-->
+                                <li data-target="#demoof63" data-slide-to="1"></li>
+                                <!--warning .. change Id and href-->
+                                <li data-target="#demoof63" data-slide-to="2"></li>
+                                <!--warning .. change Id and href-->
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/cover1.jpg" alt="Los Angeles">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/cover2.jpg" alt="Chicago">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/cover3.jpg" alt="New York">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content px-2">
+                            <p class="price pt-2 m-0">$3434 <span> lowers pricce</span></p>
+                            <h2>title title title title title title title title </h2>
+
+                        </div>
+                        <a href="#" class="btn  m-3">More Details</a>
+
+                    </div>
+                    <div class="card m-3 shadow border ">
+                            <div id="demoof63" class="carousel slide border" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                    <li data-target="#demoof63" data-slide-to="0" class="active"></li>
+                                    <!--warning .. change Id and href-->
+                                    <li data-target="#demoof63" data-slide-to="1"></li>
+                                    <!--warning .. change Id and href-->
+                                    <li data-target="#demoof63" data-slide-to="2"></li>
+                                    <!--warning .. change Id and href-->
+                                </ul>
+    
+                                <!-- The slideshow -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/cover1.jpg" alt="Los Angeles">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/cover2.jpg" alt="Chicago">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/cover3.jpg" alt="New York">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content px-2">
+                                <p class="price pt-2 m-0">$3434 <span> lowers pricce</span></p>
+                                <h2>title title title title title title title title </h2>
+    
+                            </div>
+                            <a href="#" class="btn  m-3">More Details</a>
+    
+                        </div>
+                        <div class="card m-3 shadow border ">
+                                <div id="demoof63" class="carousel slide border" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ul class="carousel-indicators">
+                                        <li data-target="#demoof63" data-slide-to="0" class="active"></li>
+                                        <!--warning .. change Id and href-->
+                                        <li data-target="#demoof63" data-slide-to="1"></li>
+                                        <!--warning .. change Id and href-->
+                                        <li data-target="#demoof63" data-slide-to="2"></li>
+                                        <!--warning .. change Id and href-->
+                                    </ul>
+        
+                                    <!-- The slideshow -->
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="img/cover1.jpg" alt="Los Angeles">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/cover2.jpg" alt="Chicago">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/cover3.jpg" alt="New York">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content px-2">
+                                    <p class="price pt-2 m-0">$3434 <span> lowers pricce</span></p>
+                                    <h2>title title title title title title title title </h2>
+        
+                                </div>
+                                <a href="#" class="btn  m-3">More Details</a>
+        
+                            </div>
+
+                </div> <!-- end another ads -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+
+    <section class="newoffer">
+        <div class="container">
+            <!-- form send offer  -->
+            <div class="sendoffer shadow col-sm-9 p-2">
+                <form action="" method=''>
+                    <div class="form-group p-1 m-0 ">
+                        <label for="email">Price:</label>
+                        <input type="email" class="form-control" id="email">
+
+                        <label>images:</label>
+                        <input type="file" class="form-control">
+
+                        <label>Details</label>
+                        <textarea class="form-control" name="textarea" rows="3"></textarea>
+                        <input type='submit' class='btn  m-1 ' value='send' data-toggle='modal' data-target='#myModal'
+                            value='send' name='submitlogin'>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

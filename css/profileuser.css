@@ -1,0 +1,150 @@
+body {
+    font-family: 'Roboto',sans-serif;
+    background-color: #f6f7f8
+}
+.btn {
+    border: 1px solid #c2d44e;
+    color: #898e91!important;
+
+}
+.btn:hover {
+    border: 1px solid #c2d44e;
+    background-color: #c2d44e;
+    color: #fff!important;
+}
+
+.details{
+    color: #898e91
+}
+.carousel-indicators li {
+    border: 2px solid #000;
+    border-radius: 50%;
+    height: 7px;
+    width: 7px;
+}
+.header {
+    height: 151px;
+    border-bottom: 1px solid #c2d44e
+    }
+.header img {
+    height: 70px;
+    
+}
+.header .cover {
+    background-image: url('../img/cover.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 150px;
+}
+
+.header button {
+    margin: 15px 5px;
+}
+.header button:hover {
+    color: #c2d44e;
+    border: none
+}
+  .searchTerm {
+    width: 250px;
+    border: 2px solid #c2d44e;
+    border-right: none;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #898e91;
+  }
+  .fa-search {
+    width: 40px;
+    height: 40px;
+    margin-left: -5px;
+    background: #c2d44e;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 40px!important;
+  }
+
+
+/* add ads  */
+    .addads {
+        margin: 7px  0;
+        color: #fff;
+        background-color: #ff8300;
+        
+    }
+    .addads:hover {
+        color: #fff
+    }
+
+.tab-content img {
+width: 100%;
+    }
+
+    
+/* information about ads */
+.infoads {
+    background-color: #fff;
+    border-radius: 15px
+}
+.carousel-item {
+    height: 310px;
+    background-color: #fff;
+
+}
+.infoads img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center
+}
+
+.infoads .content {
+    height: 285px;
+    overflow: hidden;
+}
+.infoads .price {
+        font-size: 23px;
+        color: #c2d44e
+}
+.infoads .price span{
+    font-size: 14px;
+    color: #aaa;
+
+}
+.contentseller{
+    height: 285px;
+    overflow: hidden;
+    border: 1px solid #c2d44e;
+    border-radius: 15px
+}
+
+  .card a {
+    text-decoration: none;
+    color: #111
+    }
+.card >.card-header{
+    background-color: #fff;
+
+}
+.comments .date {
+    font-size: 13px
+}
+.comments   img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%
+}
+.comments .replay {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+  .card  a:hover {
+color: #c2d44e
+}
+.card {
+    border: none
+}
